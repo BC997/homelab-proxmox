@@ -1,0 +1,15 @@
+auto lo
+iface lo inet loopback
+iface eno2 inet manual
+auto vmbr0
+iface vmbr0 inet static
+	address 192.168.1.204/24
+	gateway 192.168.1.1
+	bridge-ports eno2
+	bridge-stp off
+	bridge-fd 0
+	post-up ethtool -G eno2 tx 4096
+	post-up ethtool -A eno2 autoneg off rx off tx off
+iface enx8cae4cbeae7c inet manual
+iface wlo1 inet manual
+source /etc/network/interfaces.d/*

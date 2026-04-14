@@ -1,0 +1,13 @@
+auto lo
+iface lo inet loopback
+iface enp42s0 inet manual
+auto vmbr0
+iface vmbr0 inet static
+	address 192.168.1.205/24
+	gateway 192.168.1.1
+	bridge-ports enp42s0
+	bridge-stp off
+	bridge-fd 0
+	post-up ethtool -A enp42s0 autoneg off rx off tx off
+iface enx8cae4cbeae7c inet manual
+source /etc/network/interfaces.d/*
