@@ -29,7 +29,6 @@
 | 102 | Ubuntu-Desktop-Template | stopped | 8 | 16GB | 64G | DHCP | N/A (template) |
 | 103 | Security-VM | stopped | 4 | 6GB | 80G | 10.0.0.238 | N/A |
 | 104 | Super-Admin | stopped | 16 | 60GB | 64G | 10.0.0.131 | N/A |
-| 107 | MediaClient | running | 8 | 32GB | 64G | 10.0.0.147 | N/A |
 
 ## Node NIC Notes
 - Dessert eno2: TX ring buffer set to 4096, flow control disabled (Intel e1000e)
